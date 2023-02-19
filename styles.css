@@ -32,6 +32,10 @@ h3 {
     font-size: 1.5rem;
 }
 
+span {
+    color: var(---buttonColor)
+}
+
 .sectionColor {
     color: white;
     background-color: #000201;
@@ -62,12 +66,12 @@ button {
     cursor: pointer;
 }
 
-i {
-    cursor: pointer;
-}
-
 button:hover {
     letter-spacing: 2px;
+}
+
+i {
+    cursor: pointer;
 }
 
 #Home {
@@ -323,7 +327,7 @@ p span::before {
     width: 18rem;
 }
 
-#Products .productList .productItem #kkk i {
+#Products .productList .productItem .kkk i {
     font-size: 1.3rem;
     margin-inline: 0.5rem;
     border: 2px solid grey;
@@ -351,29 +355,192 @@ p span::before {
     scale: 0.8;
 }
 
-#Review #reviewList .reviewListItem {
+#Review #reviewList {
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.reviewListItem {
     position: relative;
-    padding: 8rem 2rem 1rem;
+    padding: 2rem 2rem 1rem;
     text-align: center;
     width: 25rem;
     border: 2px solid grey;
     border-radius: 5px;
+    transform: scale(0.95);
+}
+
+#Review #reviewList .reviewListItem img{
+    width: 28%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid grey;
+    margin-block: 1rem;
+    cursor: pointer;
+    transition: transform 0.25s;
+}
+
+#Review #reviewList .reviewListItem img:hover{
+    transform: translateY(-0.8rem) scale(1.1);
+}
+
+#Review #reviewList .reviewListItem svg {
+    fill: orange;
+    height: 4rem;
+    width: 2rem;
+    transform: rotateZ(180deg);
+    margin-bottom: 1rem;
+}
+
+#Contact .contactCon {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#Contact .contactCon #maps {
+    width: 30rem;
+    aspect-ratio: 1/1;
+    border: none;
+    outline: none;
+}
+
+#Contact .contactCon .contactInfo {
+    padding: 2rem;
+    background-color: #111319;
+    width: 30rem;
+    height: 28.2rem;
+    overflow: hidden;
+}
+
+#Contact .contactCon .contactInfo input {
+    width: 95%;
+    background-color: transparent;
+    border: 1px solid grey;
+    height: 3rem;
+    margin-block: 1.2rem;
+    padding-left: 1rem;
+    border-radius: 4px;
+}
+
+#Contact .contactCon .contactInfo input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(---buttonColor);
+    border: none;
+    border-radius: 4px;
+    transition: letter-spacing 0.25s;
+    cursor: pointer;
+}
+
+#Contact .contactCon .contactInfo input [type="submit"]:hover {
+    letter-spacing: 2px;
+}
+
+#Blogs .blogList {
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#Blogs .blogList .blogItem {
+    max-width: 23rem;
+    border: 2px solid orange;
+}
+
+#Blogs .blogList .blogItem .blackBackground {
+    background-color: transparent;
+    z-index: 5;
+}
+
+#Blogs .blogList .blogItem img {
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: transform 0.25s;
+}
+
+#Blogs .blogList .blogItem span {
+    margin-block: 1rem;
+    font-size: 1.5rem;
+    display: block;
+    margin-left: 1rem;
+}
+
+#Blogs .blogList .blogItem p {
+    margin-block: 1rem;
+    margin-left: 1rem;
+}
+
+#Blogs .blogList .blogItem button {
+    scale: 0.8;
+    margin-bottom: 1rem;
+}
+
+#Blogs .blogList .blogItem h3 {
+    margin-left: 1rem;
+}
+
+#Blogs .blogList .blogItem img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #111319;
+}
+
+footer #socialLinks i {
+    font-size: 2rem;
+    color: white;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 0.5rem;
+}
+
+footer #socialLinks i:hover{
+    color: var(---buttonColor);
+}
+
+footer ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-block: 1rem;
+}
+
+footer ul li {
+    background-color: transparent;
+    border: 2px solid grey;
+    width: 7rem;
+    padding: 0.3rem 1rem;
+    margin-inline: 0.3rem;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+footer ul li a:hover{
+    color: grey;
+}
+
+footer h2 {
+    font-size: 100%;
+    color: white;
 }
 
 
-#Review #reviewList .reviewListItem::before{
-    content: '';
-    position: absolute;
-    /* height: 25%; */
-    width: 7%;
-    top: 15%;
-    bottom: 70%;
-    background-color: white;
-}
 
-#Review #reviewList .reviewListItem h3 {
-    scale: 1.3;
-}
 
 
 
